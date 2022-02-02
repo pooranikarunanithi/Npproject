@@ -31,7 +31,7 @@ import {  useNavigate } from "react-router-dom";
           type: "LOGGED_IN_USER",
           payload: res.data,
         });
-        navigate.push("/home");
+        navigate("/");
       }
     } catch (err) {
       console.log(err);

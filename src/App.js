@@ -5,7 +5,7 @@ import Register  from "./auth/Register"
 import TopNav from "./components/TopNav"
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
-import './App.css';
+
 
 function App() {
   return (
@@ -23,9 +23,6 @@ function App() {
 
     
   );
-}
-<div  className="contaniner">
-       
-     </div>
+  }
 
 export default App;
