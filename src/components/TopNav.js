@@ -14,7 +14,7 @@ const TopNav = () => {
       payload: null,
     });
     window.localStorage.removeItem("auth");
-    navigate.push("/login");
+    navigate("/login");
   };
 
   return (

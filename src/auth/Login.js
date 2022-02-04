@@ -8,8 +8,8 @@ import {  useNavigate } from "react-router-dom";
   const Login = ( ) => {
   const navigate =useNavigate();
  
-  const [email, setEmail] = useState("ryan@gmail.com");
-  const [password, setPassword] = useState("rrrrrr");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
 
@@ -27,11 +27,12 @@ import {  useNavigate } from "react-router-dom";
         // save user and token to local storage
         window.localStorage.setItem("auth", JSON.stringify(res.data));
         // save user and token to redux
+        
         dispatch({
           type: "LOGGED_IN_USER",
           payload: res.data,
         });
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (err) {
       console.log(err);
